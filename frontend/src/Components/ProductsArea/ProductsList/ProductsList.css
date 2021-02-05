@@ -12,9 +12,10 @@
     font-weight: bold;
 }  
 
-.ProductsList > table{
-    width: 900px;
+.ProductsList > .TableContainer {
+    width: fit-content;
     margin: auto;
+    padding-bottom: 10px;
 }
 
 .ProductsList h2 {

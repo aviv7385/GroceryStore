@@ -85,13 +85,13 @@ class ProductsList extends Component<ProductsListProps, ProductsListState> {
     // delete the chosen product from the list and from the server and update the state 
     public deleteProduct = async (productId: number) => {
         try {
-            let  productName;
-            this.state.products.find(p => {
+            let productName;
+            this.state.products.forEach(p => {
                 if (productId === p.productId) {
                     productName = p.productName;
                 }
             });
-            const answer = window.confirm(`Are you sure you want to remove ${productName}?`);
+            const answer = window.confirm(`Are you sure you want to remove the ${productName}?`);
             if (!answer) {
                 return;
             }
@@ -123,32 +123,35 @@ class ProductsList extends Component<ProductsListProps, ProductsListState> {
                 </form>
                 <br /><br />
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Code</th>
-                            <th>Category</th>
-                            <th>Name</th>
-                            <th>Produce Date</th>
-                            <th>Expiry Date</th>
-                            <th>Price</th>
-                            <th>Remove</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {this.state.products.map(p =>
-                            <tr key={p.productId}>
-                                <td>{p.productId}</td>
-                                <td>{p.category}</td>
-                                <td>{p.productName}</td>
-                                <td>{new Date(p.produceDate).toLocaleString()}</td>
-                                <td>{new Date(p.expireDate).toLocaleString()}</td>
-                                <td>{p.productPrice} ILS</td>
-                                <td><button value={p.productId} className="RemoveButton" onClick={this.setProductHandler}>X</button></td>
+                <div className="TableContainer">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Produce Date</th>
+                                <th>Expiry Date</th>
+                                <th>Price</th>
+                                <th>Remove</th>
                             </tr>
-                        )}
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            {this.state.products.map(p =>
+                                <tr key={p.productId}>
+                                    <td>{p.productId}</td>
+                                    <td>{p.productName}</td>
+                                    <td>{p.category}</td>
+                                    <td>{new Date(p.produceDate).toLocaleString()}</td>
+                                    <td>{new Date(p.expireDate).toLocaleString()}</td>
+                                    <td>{p.productPrice} ILS</td>
+                                    <td><button value={p.productId} className="RemoveButton" onClick={this.setProductHandler}>X</button></td>
+                                </tr>
+                            )}
+                        </tbody>
+                    </table>
+
+                </div>
 
             </div>
         );

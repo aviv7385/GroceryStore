@@ -1,3 +1,33 @@
-.AddProduct {
-	
+.AddProduct label {
+	display: block;
+    font-size: 15pt;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
+
+.AddProduct h2 {
+    font-size: 28pt;
+    width: fit-content;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.AddProduct input, .AddProduct select, .AddProduct button {
+    width: 220px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.AddProduct button {
+    margin-top: 15px;
+}
+
+.AddProduct form {
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+    padding-bottom: 15px;
+}
+
