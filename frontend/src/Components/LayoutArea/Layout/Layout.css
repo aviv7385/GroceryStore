@@ -1,7 +1,8 @@
 .Layout h1 {
     text-align: center;
     font-size: 30pt;
-    color: darkolivegreen;
+    color: darkslategray;
+    font-weight: 800;
 }
 
 .Layout nav {
@@ -11,5 +12,13 @@
 
 .Layout h2 {
     text-align: center;
-    color: darkgreen;
+    color: lightslategray;
+}
+
+.Layout a{
+    color:#475969;
+}
+
+.Layout a:hover {
+    color: white;
 }

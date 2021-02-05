@@ -4,7 +4,6 @@
 }
 
 .ProductsList label, .ProductsList select {
-    
     width: 220px;
     box-sizing: border-box;
     border-radius: 5px;
@@ -21,14 +20,30 @@
 .ProductsList h2 {
     text-align: center;
     font-size: 28pt;
+    margin-top: 20px;
 }
 
 .ProductsList table, .ProductsList th, .ProductsList td {
-    border: 1px solid black;
+   border-bottom: 1px solid white;
     border-collapse: collapse;
     font-size: 12pt;
     padding: 10px;
     text-align: center;
+}
+
+.ProductsList th {
+    background-color:#475969;
+    color: white;
+   
+}
+
+/* .ProductsList tr:nth-child(even) {
+    background-color:#CDD5DB;
+} */
+
+.ProductsList tr:hover{
+    background-color:#B9C5CF;
+    color: white;
 }
 
 .ProductsList .RemoveButton {
@@ -38,11 +53,11 @@
     background-color: transparent;
     font-weight: 900;
     box-shadow: 3px 3px 2px gray ;
-    border: 1px solid gray;
+    border: 1px solid lightgray;
 }
 
 .ProductsList .RemoveButton:hover {
     cursor: pointer;
-    background-color: darkgreen;
+    background-color: #475969;
     color: white;
 }

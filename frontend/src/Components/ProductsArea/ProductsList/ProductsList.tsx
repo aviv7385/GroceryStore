@@ -111,13 +111,13 @@ class ProductsList extends Component<ProductsListProps, ProductsListState> {
     public render(): JSX.Element {
         return (
             <div className="ProductsList">
-                <h2>Our Products</h2>
+                <h2>Products</h2>
 
                 {/* select box */}
                 <form className="SelectBox">
                     <label>Choose Category:</label>
                     <select name="categoryId" value="0" onChange={this.setCategoryHandler}>
-                        <option value="0" disabled>Choose from the list below</option>
+                        <option value="0" disabled>Choose from the menu</option>
                         {this.state.categories.map(c => <option key={c.categoryId} value={c.categoryId}>{c.category}</option>)}
                     </select>
                 </form>
@@ -130,8 +130,8 @@ class ProductsList extends Component<ProductsListProps, ProductsListState> {
                                 <th>Code</th>
                                 <th>Name</th>
                                 <th>Category</th>
-                                <th>Produce Date</th>
-                                <th>Expiry Date</th>
+                                <th>Produce Date & Time</th>
+                                <th>Expiry Date & Time</th>
                                 <th>Price</th>
                                 <th>Remove</th>
                             </tr>

@@ -9,7 +9,6 @@ function Layout(): JSX.Element {
 
             <div className="Layout">
                 <h1>AM:PM</h1>
-                <hr />
 
                 {/* Menu */}
                 <nav>
@@ -17,7 +16,8 @@ function Layout(): JSX.Element {
                     <span> &nbsp; | &nbsp;</span>
                     <NavLink to="/add-product">Add Product</NavLink>
                 </nav>
-
+                <hr />
+                
                 {/* Routing */}
                 <Switch>
                     <Route path="/products" component={ProductsList} />
