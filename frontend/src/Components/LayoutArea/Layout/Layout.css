@@ -1,0 +1,15 @@
+.Layout h1 {
+    text-align: center;
+    font-size: 30pt;
+    color: darkolivegreen;
+}
+
+.Layout nav {
+    text-align: center;
+    color: gray;
+}
+
+.Layout h2 {
+    text-align: center;
+    color: darkgreen;
+}

@@ -1,0 +1,47 @@
+.ProductsList .SelectBox {
+    width: fit-content;
+    margin: auto;
+}
+
+.ProductsList label, .ProductsList select {
+    
+    width: 220px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+}  
+
+.ProductsList > table{
+    width: 900px;
+    margin: auto;
+}
+
+.ProductsList h2 {
+    text-align: center;
+    font-size: 28pt;
+}
+
+.ProductsList table, .ProductsList th, .ProductsList td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size: 12pt;
+    padding: 10px;
+    text-align: center;
+}
+
+.ProductsList .RemoveButton {
+    border-radius:20%;
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    font-weight: 900;
+    box-shadow: 3px 3px 2px gray ;
+    border: 1px solid gray;
+}
+
+.ProductsList .RemoveButton:hover {
+    cursor: pointer;
+    background-color: darkgreen;
+    color: white;
+}

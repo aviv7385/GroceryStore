@@ -13,8 +13,19 @@ router.get("/categories", async (request, response) => {
     }
 });
 
+// GET all products
+router.get("/", async (request, response) => {
+    try {
+        const products = await productsLogic.getAllProductsAsync();
+        response.json(products);
+    }
+    catch (err) {
+        response.status(500).send(err);
+    }
+});
+
 // GET products by category
-router.get("/categories/:categoryId", async (request, response) => {
+router.get("/:categoryId", async (request, response) => {
     try {
         const categoryId = +request.params.categoryId;
         const products = await productsLogic.getProductsByCategoryAsync(categoryId);
